@@ -1,0 +1,244 @@
+* {
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: white;
+}
+
+.title, .subtitle {
+    font-family: 'Lexend Peta', sans-serif;
+    color: white; 
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 120%;
+}
+
+@media (min-width: 1024px) {
+    .title, .subtitle {
+        font-size: 200%;
+    }
+
+    .tituloIndex {
+        letter-spacing: 10px;
+    }
+}
+
+.tituloIndex {
+    letter-spacing: 5px;
+}
+
+.parrafo {
+    color: white;
+}
+
+ul li {
+    color: white;
+}
+
+.servicios img, .hablemos img {
+    width: 50px;
+    height: 50px;
+}
+
+.servicios div {
+    width: 250px;
+    text-align: center;
+}
+
+.logo {
+    width: 90px;
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        width: 140px;
+    }
+}
+
+.logo:hover {
+    animation-name: bailar;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes bailar {
+    25% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+}
+
+html body {
+    /* background-image: url("img/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; */
+    background-color: black;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu img {
+    width: 20px;
+    transition: .5s;
+}
+
+.menu:hover img {
+    transform: scale(2,2);
+}
+
+.menu div {
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    max-height: 0;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    text-align: right;
+    transition: max-height .5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu:hover div {
+    opacity: 1;
+    padding: 10px 30px;
+    max-height: 1000px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 85%;
+    padding-bottom: 5px;
+    transition: 1s;
+}
+
+.menu a:hover {
+    transform: scale(1.5,1.5);
+}
+
+section {
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+
+@media (min-width: 1024px) {
+    section {
+        height: 100vh;
+    }
+}
+    
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.videoContainer {
+    height: 70vh;
+    overflow: hidden;
+}
+
+.videoContainer div {
+    position: absolute;
+    top: 30vh;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+footer {
+    margin: 50px -40px 20px -40px;
+    background-image: linear-gradient(to bottom, black, #051715, black);
+}
+
+footer hr {
+    border: 2px solid white;
+    margin: 30px;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .footerContent {
+        flex-direction: row;
+    }
+}
+
+.footerContent img {
+    width: 35px;
+}
+
+.footerContent a, .footerContent img, .hablemos img {
+    text-decoration: none;
+    font-size: 80%;
+    border-bottom: transparent 3px solid;
+    padding-bottom: 5px;
+    transition: 0.5s;
+    color: white;
+}
+
+.footerContent a:hover, .footerContent img:hover, .hablemos img:hover {
+    border-bottom-color: white;
+    transform: scale(1.5,1.5);
+    color: white;
+    text-decoration: none;
+}
+
+.moreSection {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moreSection span {
+    font-size: 70%;
+}
+
+.moreLine {
+    height: 25px;
+    width: 0;
+    border: white 1px solid;
+}
+
+.hablemos div {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.servicios div:hover {
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+    animation-duration: 2s;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-75px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}

@@ -1,0 +1,53 @@
+.menu {
+    position: relative;
+    
+    img {
+        width: 20px;
+        transition: .5s;
+    }
+    
+    &:hover {
+        img {
+            transform: scale(2,2);
+        }
+    
+        .link-menu {
+            opacity: 1;
+            padding: 10px 30px;
+            max-height: 1000px;
+        }
+    }
+}
+
+
+
+.link-menu {
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    max-height: 0;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background-color: $base-color;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    text-align: right;
+    transition: max-height .5s;
+    overflow: hidden;
+    z-index: 1;
+    
+    &__item {
+        text-decoration: none;
+        color: black;
+        font-size: 85%;
+        padding-bottom: 5px;
+        transition: 1s;
+    
+        &:hover {
+            transform: scale(1.5,1.5);
+        }
+    }
+}
+
+

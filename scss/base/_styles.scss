@@ -1,22 +1,23 @@
 @import 'variables';
-@import 'animations', 'footer', 'menu';
-
+@import 'animations';
 * {
     font-family: $base-font;
     font-size: 25px;
-    color: $base-color;
+    scroll-behavior: smooth;
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
     font-family: 'Lexend Peta', sans-serif;
-    color: $base-color; 
     text-align: left;
     text-transform: uppercase;
     font-size: 120%;
+    animation: aparecer 5s;
 }
 
 @media (min-width: 1024px) {
-    .title, .subtitle {
+    .title,
+    .subtitle {
         font-size: 200%;
     }
 }
@@ -42,17 +43,33 @@
     animation-timing-function: linear;
 }
 
-html body {
-    background-color: black;
-}
-
 section {
     animation-duration: 2s;
     animation-name: aparecer;
 }
 
-@media (min-width: 1024px) {
-    section {
-        height: 100vh;
-    }
+.bg-primary {
+    background-color: $base-color;
+}
+
+.bg-secondary {
+    background-color: $secondary-color;
+}
+
+.font-primary {
+    color: $base-color
+}
+
+.font-secondary {
+    color: $secondary-color;
+}
+
+.primary-theme {
+    @extend .bg-secondary;
+    @extend .font-primary;
+}
+
+.secondary-theme {
+    @extend .bg-primary;
+    @extend .font-secondary;
 }

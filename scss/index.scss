@@ -1,12 +1,8 @@
 @import 'base/styles';
-
-.tituloIndex {
-    letter-spacing: 5px;
-}
-
+@import 'servicios';
 @media (min-width: 1024px) {
     .tituloIndex {
-        letter-spacing: 10px;
+        letter-spacing: .3em;
     }
 }
 
@@ -20,6 +16,9 @@
     top: 30vh;
     left: 8%;
     transform: translateY(-50%);
+    &:last-child {
+        top: calc(30vh + 50px)
+    }
 }
 
 .moreSection {
@@ -39,4 +38,102 @@
     height: 25px;
     width: 0;
     border: $base-color 1px solid;
+}
+
+.section:first-child {
+    padding-top: 0 !important;
+}
+
+.subtitleIndex {
+    width: fit-content;
+    overflow: hidden;
+    border-right: .15em solid $base-color;
+    white-space: nowrap;
+    animation: typing 2.5s steps(21, end), blink-caret .75s step-end infinite;
+    letter-spacing: .3em;
+    font-size: 110%;
+}
+
+.contact {
+    div {
+        margin-bottom: 50px;
+    }
+    .contact-main p {
+        color: $pink;
+        font-weight: bold;
+        font-size: 215%;
+        line-height: 1;
+        margin: 0;
+    }
+    .contact-point p {
+        color: rgb(135, 135, 135);
+        font-size: 200%;
+        font-weight: bold;
+        margin: 0;
+    }
+    .contact-location a {
+        color: $pink;
+        font-size: 170%;
+        font-weight: bold;
+        border-bottom: 0.2rem solid $pink;
+        text-decoration: none;
+    }
+    .contact-media {
+        display: flex;
+        a {
+            border: black 1px solid;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            &:hover {
+                background-color: $pink;
+                border-color: $pink;
+                img {
+                    filter: invert(100%);
+                }
+            }
+        }
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.contact-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+        display: block;
+        max-height: 50vh;
+        max-width: 80%;
+        &:first-child {
+            animation: float 6s ease-in-out infinite;
+        }
+        &:last-child {
+            animation: scale 6s ease-in-out infinite;
+        }
+    }
+}
+
+.letra-rosa {
+    color: $pink;
+    font-weight: bold;
+}
+
+.letra-celeste {
+    color: #89baaa;
+    font-weight: bold;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-indicators {
+    filter: invert(1);
 }

@@ -261,6 +261,12 @@ section {
   width: 0;
   border: white 1px solid; }
 
+.section:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
 .section:first-child {
   padding-top: 0 !important; }
 
@@ -352,15 +358,19 @@ section {
 
 .hidden-mobile {
   display: none; }
-
-@media (min-width: 1024px) {
-  .hidden-mobile {
-    display: inline; } }
+  @media (min-width: 1024px) {
+    .hidden-mobile {
+      display: inline; } }
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon,
 .carousel-indicators {
   filter: invert(1); }
+
+.carousel-item {
+  height: 300px;
+  overflow: hidden;
+  width: 100%; }
 
 .text-nosotros,
 .text-nosotros span {

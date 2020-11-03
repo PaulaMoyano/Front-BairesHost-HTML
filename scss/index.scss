@@ -40,8 +40,16 @@
     border: $base-color 1px solid;
 }
 
-.section:first-child {
-    padding-top: 0 !important;
+.section {
+    &:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &:first-child {
+        padding-top: 0 !important;
+    }
 }
 
 @media (min-width: $breakpoint) {
@@ -156,6 +164,12 @@
 .carousel-control-prev-icon,
 .carousel-indicators {
     filter: invert(1);
+}
+
+.carousel-item {
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .text-nosotros,

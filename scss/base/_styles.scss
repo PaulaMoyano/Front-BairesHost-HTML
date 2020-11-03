@@ -11,14 +11,23 @@
     font-family: 'Lexend Peta', sans-serif;
     text-align: left;
     text-transform: uppercase;
-    font-size: 120%;
     animation: aparecer 5s;
 }
 
+.title {
+    font-size: 120%;
+}
+
+.subtitle {
+    font-size: 80%;
+}
+
 @media (min-width: 1024px) {
-    .title,
-    .subtitle {
+    .title {
         font-size: 200%;
+    }
+    .subtitle {
+        font-size: 110%;
     }
 }
 

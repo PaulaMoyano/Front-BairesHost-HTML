@@ -12,22 +12,30 @@
     .image-description {
         text-align: left;
         padding: 5% 2% 0 2%;
-        transform: scale(1);
         transition: 1s;
         h3 {
-            font-size: 120%;
+            font-size: 70%;
             font-weight: bold;
         }
         p {
-            font-size: 80%;
-            opacity: 0;
-            transition: 1s;
+            display: none;
         }
-        &:hover {
-            background: rgba(0, 0, 0, 0.35);
-            transition-timing-function: ease-in-out;
+        @media (min-width: $breakpoint) {
+            h3 {
+                font-size: 120%;
+            }
             p {
-                opacity: 1;
+                display: block;
+                font-size: 80%;
+                opacity: 0;
+                transition: 1s;
+            }
+            &:hover {
+                background: rgba(0, 0, 0, 0.35);
+                transition-timing-function: ease-in-out;
+                p {
+                    opacity: 1;
+                }
             }
         }
         &::before {

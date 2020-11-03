@@ -49,13 +49,19 @@
   font-family: 'Lexend Peta', sans-serif;
   text-align: left;
   text-transform: uppercase;
-  font-size: 120%;
   animation: aparecer 5s; }
 
+.title {
+  font-size: 120%; }
+
+.subtitle {
+  font-size: 80%; }
+
 @media (min-width: 1024px) {
-  .title,
+  .title {
+    font-size: 200%; }
   .subtitle {
-    font-size: 200%; } }
+    font-size: 110%; } }
 
 .parrafo {
   color: white; }
@@ -140,13 +146,19 @@ section {
   font-family: 'Lexend Peta', sans-serif;
   text-align: left;
   text-transform: uppercase;
-  font-size: 120%;
   animation: aparecer 5s; }
 
+.title {
+  font-size: 120%; }
+
+.subtitle {
+  font-size: 80%; }
+
 @media (min-width: 1024px) {
-  .title,
+  .title {
+    font-size: 200%; }
   .subtitle {
-    font-size: 200%; } }
+    font-size: 110%; } }
 
 .parrafo {
   color: white; }
@@ -193,20 +205,25 @@ section {
   .services-container .image-description {
     text-align: left;
     padding: 5% 2% 0 2%;
-    transform: scale(1);
     transition: 1s; }
     .services-container .image-description h3 {
-      font-size: 120%;
+      font-size: 70%;
       font-weight: bold; }
     .services-container .image-description p {
-      font-size: 80%;
-      opacity: 0;
-      transition: 1s; }
-    .services-container .image-description:hover {
-      background: rgba(0, 0, 0, 0.35);
-      transition-timing-function: ease-in-out; }
-      .services-container .image-description:hover p {
-        opacity: 1; }
+      display: none; }
+    @media (min-width: 1024px) {
+      .services-container .image-description h3 {
+        font-size: 120%; }
+      .services-container .image-description p {
+        display: block;
+        font-size: 80%;
+        opacity: 0;
+        transition: 1s; }
+      .services-container .image-description:hover {
+        background: rgba(0, 0, 0, 0.35);
+        transition-timing-function: ease-in-out; }
+        .services-container .image-description:hover p {
+          opacity: 1; } }
     .services-container .image-description::before {
       content: '';
       display: block;
@@ -247,14 +264,13 @@ section {
 .section:first-child {
   padding-top: 0 !important; }
 
-.subtitleIndex {
-  width: fit-content;
-  overflow: hidden;
-  border-right: 0.15em solid white;
-  white-space: nowrap;
-  animation: typing 2.5s steps(21, end), blink-caret 0.75s step-end infinite;
-  letter-spacing: .3em;
-  font-size: 110%; }
+@media (min-width: 1024px) {
+  .subtitleIndex {
+    overflow: hidden;
+    animation: typing 2.5s steps(21, end), blink-caret 0.75s step-end infinite;
+    white-space: nowrap;
+    border-right: 0.15em solid white;
+    letter-spacing: .3em; } }
 
 .contact div {
   margin-bottom: 50px; }
@@ -262,22 +278,31 @@ section {
 .contact .contact-main p {
   color: #f74ea1;
   font-weight: bold;
-  font-size: 215%;
+  font-size: 95%;
   line-height: 1;
   margin: 0; }
+  @media (min-width: 1024px) {
+    .contact .contact-main p {
+      font-size: 215%; } }
 
 .contact .contact-point p {
   color: #878787;
-  font-size: 200%;
   font-weight: bold;
+  font-size: 95%;
   margin: 0; }
+  @media (min-width: 1024px) {
+    .contact .contact-point p {
+      font-size: 200%; } }
 
 .contact .contact-location a {
   color: #f74ea1;
-  font-size: 170%;
   font-weight: bold;
+  font-size: 95%;
   border-bottom: 0.2rem solid #f74ea1;
   text-decoration: none; }
+  @media (min-width: 1024px) {
+    .contact .contact-location a {
+      font-size: 170%; } }
 
 .contact .contact-media {
   display: flex; }
@@ -306,8 +331,12 @@ section {
   flex-direction: column; }
   .contact-left img {
     display: block;
-    max-height: 50vh;
-    max-width: 80%; }
+    max-height: 8vh;
+    max-width: 20%; }
+    @media (min-width: 1024px) {
+      .contact-left img {
+        max-width: 80%;
+        max-height: 50vh; } }
     .contact-left img:first-child {
       animation: float 6s ease-in-out infinite; }
     .contact-left img:last-child {
@@ -321,7 +350,18 @@ section {
   color: #89baaa;
   font-weight: bold; }
 
+.hidden-mobile {
+  display: none; }
+
+@media (min-width: 1024px) {
+  .hidden-mobile {
+    display: inline; } }
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon,
 .carousel-indicators {
   filter: invert(1); }
+
+.text-nosotros,
+.text-nosotros span {
+  font-size: 0.8rem; }
